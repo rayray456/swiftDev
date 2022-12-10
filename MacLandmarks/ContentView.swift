@@ -1,21 +1,22 @@
 //
 //  ContentView.swift
-//  Landmarks
+//  MacLandmarks
 //
-//  Created by Raymond Lang on 11/15/22.
+//  Created by Raymond Lang on 12/7/22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        LandmarkList()
+            .frame(minWidth: 700, minHeight: 300)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }
